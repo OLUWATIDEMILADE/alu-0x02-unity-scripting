@@ -24,13 +24,13 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    // LateUpdate is called after all Update functions have been processed
+    void LateUpdate()
     {
         // Check if the player is assigned
         if (player != null)
         {
-            // Set the camera's position relative to the player's position plus the offset
+            // Update the camera's position relative to the player's position plus the offset
             transform.position = player.transform.position + offset;
         }
     }
